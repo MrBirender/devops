@@ -1,0 +1,53 @@
+#steps to authenticate via ssh in github for using multiple accounts in one machine.
+
+1. you need to have both the accounts logged in the current machine.
+2. using bash or any linux like shell need to create the ssh-key
+    cmd: 
+    head over to your ~/.ssh dir
+    ssh-keygen -t ed25519 -C "your email" -f "filename"
+
+
+    🔐 -t stands for “type of key” — here are the supported types:
+        rsa -	Rivest-Shamir-Adleman (most common)	Used widely, supports key lengths 2048/4096
+        dsa -	Digital Signature Algorithm (legacy)	Deprecated — avoid using
+        ecdsa -	Elliptic Curve Digital Signature Algorithm	Smaller, faster, secure — requires OpenSSH 5.7+
+        ed25519 -	EdDSA with Curve25519 (most secure)	Recommended — strong, fast, modern
+
+step3: then it will ask for a key which we can keep empty
+
+step4: it will give the keys : we can check with ls
+
+step5: we need to run eval "$(ssh-agent -s)"
+
+step 6: give the public ssh keys to the both github account for personal and companies.
+
+step 7. now github knows who is the user. but locally using a config file we also need to tell the gihub which account need to use while pushing and pulling.
+
+
+step 8. in the ~/.ssh dir create a config file
+    cmd: nano config
+    # Personal_account
+    Host github-personal
+    HostName gihub.com
+    User git
+    IdentifyFile ~/.ssh/privat-key-file-name
+
+    # Work_account
+    Host github-work
+    HostName gihub.com
+    User git
+    IdentifyFile ~/.ssh/work-file-name
+
+step9: aftet this save this file and clone the repo
+    cmd: git clone : git@github.com:winspiretech/logiglo_frontend_admin_2.0.git
+    instead of github.com use our HostName from the config file.
+    like github-work for work and gihub-personal for personal
+
+
+    and then it will work smoothly.
+
+
+step10. to save the correct commit history with correct name and mail change the config detials folder wise.
+use everywher before pushing;
+    git config user.name "name"
+    git config user.email "email"

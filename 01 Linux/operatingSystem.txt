@@ -1,0 +1,34 @@
+Q. what are the tasks of os?
+    1. allocation of tasks to cpu.
+
+    2. memory management: if there is no enough space in the memory that it does meemory swaping and it is a slow process.
+    in this process it clears the tasks from ram and store in rom and make the space for another task.
+
+    3. manage file system and sotres everything in tree like structure.
+
+    4. management of input output devices.
+
+    5.Handle security and authentication.
+
+    6. Kernel is the heart of os. it does all the tasks stated above. it is simply a code.
+
+    7. os is a layerd system.
+=> when kernel is layerd with application it becomes os most of the time we are using linux os. and its distributions, even the andriod in mobile.
+
+=> macos and ios works differently they works on darwin kernel.
+
+There are two types of operating system for computers:
+    1. desktop based
+    2. server based
+
+server based os are fast and secure because they doesn't havin ui.we just directly login to them using command line interface.
+
+unix is the oldest thing. mac and linux are coming from here.
+now we maintain a standard for os and it is posix.
+
+
+what are hypervisors?
+Answser: A hypervisor (also known as a Virtual Machine Monitor, or VMM) is a software, firmware, or hardware platform that creates and runs virtual machines (VMs). It allows multiple operating systems to share a single hardware host, each running in its own isolated environment.
+
+
+
