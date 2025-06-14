@@ -1,0 +1,20 @@
+# git push  --set-upstream origin master
+what it does ?
+does it create the local git branch to the remote git branch ?
+
+#when implementing new featuer or fixing an bug try to do it with a  new branch it is  the good practice.
+fomrat: feature/feature_name or bugfix/bug_name
+
+
+what is the Trunk based development ?
+on a push to the main branch it will test build and deploy the code.
+
+Another method is the feature based development but it is not the good practice.
+
+Trunk based development: best suites to the ci/cd pipeline.
+
+# do Delete the branch when the feature and the bug fixes is done.
+once the the remote branch is delete using ui , we need to delete the local branch as well. using git branch -d branch_name
+
+# what is git -r (rebase ) while pushing ?
+is it an alternative of git stash or anyting else.
