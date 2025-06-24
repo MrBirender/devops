@@ -1,0 +1,7 @@
+# different languages have different bundling tools.
+
+# nodejs uses npm
+# python uses pip
+# java uses maven
+# c++ uses cmake
+# java uses gradle
